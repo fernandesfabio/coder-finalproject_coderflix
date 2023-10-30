@@ -234,3 +234,115 @@ footer > .interface{
     }
     
 }
+
+/* Classes de Detalhe da Serie */
+.serie-topo {
+    background: linear-gradient(90deg, rgb(24, 24, 27) 0.04%, rgba(24, 24, 27, 0.76) 38.05%, rgba(0, 0, 0, 0) 100%), url(../assets/Bg-Image.png) 50% 50% / cover;
+    position: relative;
+  }
+  
+  .serie__description {
+    color: var(--gray-400);
+    font-size: 1.6rem;
+    font-family: var(--font-subtitles);
+    font-weight: 400;
+    line-height: 2.2rem;
+    margin-bottom: 2.4rem;
+  }
+  
+  .serie-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    left: 50px;
+    position: relative;
+    top: 50px;
+    max-width: 550px;
+  }
+  
+  .video-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .episodios {
+    align-items: flex-start;
+    flex-direction: column;
+    top: 50px;
+    display: flex;
+    gap: 32px;
+    left: 50px;
+    right: 50px;
+    justify-content: center;
+    padding: 50px 0px;
+    position: relative;
+    width: 1340px;
+  }
+  
+  .episodios .episode-section {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+  }
+  
+  .episodios .episode-title {
+    align-items: center;
+    display: flex;
+    gap: 283px;
+    height: 48px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .episodios .episode-card {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 16px;
+    position: relative;
+    width: 1340px;
+  }
+  
+  .episodios .episode-thumbnail,
+  .episodios .episode-thumbnail-2,
+  .episodios .episode-thumbnail-3 {
+    background-size: cover;
+    height: 262px;
+    position: relative;
+    width: 425px;
+  }
+  
+  .episodios .episode-description {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    width: 899px;
+  }
+  
+  .episodios .episode-heading {
+    color: var(--white);
+    font-family: "Montserrat-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+  }
+  
+  .episodios .episode-summary {
+    color: var(--grey);
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    font-style: var(--body-font-style);
+    font-weight: var(--body-font-weight);
+    letter-spacing: var(--body-letter-spacing);
+    line-height: var(--body-line-height);
+    position: relative;
+  }
+  
