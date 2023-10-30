@@ -12,41 +12,83 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="favicon icon" href="./assets/coderFavicon.ico">
   <link rel="stylesheet" href="./styles/index.css">
+  <script src="./script/mobile.js" defer></script>
   <title>Project Coder Films</title>
 </head>
 
 <body>
-  <header class="header">
-    <img src="./assets/coder.png" alt="Logo CoderFlix">
-    <nav class="nav">
-      <ul class="nav__menu">
-        <li class="nav__box">
-          <img src="./assets/homeicon.png" alt="Icone Home">
-          <a class="nav__link" href="index.html">
-            HOME
-          </a>
-        </li>
-        <li class="nav__box">
-          <img src="./assets/tvicon.png" alt="Icone TV">
-          <a class="nav__link" href="./pages/filmes.html">
-            FILMES
-          </a>
-        </li>
-        <li class="nav__box">
-          <img src="./assets/tvicon.png" alt="Icone TV">
-          <a class="nav__link" href="./pages/series.html">
-            SERIES
-          </a>
-        </li>
-        <li class="nav__box">
-          <img src="./assets/@icon.png" alt="Icone @">
-          <a class="nav__link" href="./pages/contatos.html">
-            CONTATO
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <header>
+    <div class="interface">
+
+        <div class="logo">
+            <a href="../index.html"><img src="./assets/coder.png" alt="logo CoderFlix"></a>
+
+        </div> <!------- Logo ----->
+
+        <nav class="menu--desktop">
+            <ul>
+                <li class="nav--itens">
+                    <a class="nav--link nav--active" href="../index.html">
+                      <i class="bi bi-house-door"></i> Home
+                    </a>
+                </li>
+                <li class="nav--itens">
+                    <a class="nav--link" href="./pages/filmes.html">
+                      <i class="bi bi-film"></i> Filmes
+                    </a>
+                </li>
+                <li class="nav--itens">
+                    <a class="nav--link" href="./pages/series.html">
+                        <i class="bi bi-tv"></i> Séries
+                    </a>
+                </li>
+                <li class="nav--itens">
+                    <a class="nav--link" href="./pages/contatos.html">
+                      <i class="bi bi-chat-square-text"></i> Contato
+                    </a>
+                </li>
+            </ul>
+        </nav> <!-------- Links de navegação entre as páginas ------->
+        <div class="btn--open" id="btn--open">
+          <i class="bi bi-list"></i>
+        </div>
+        <div class="menu--mobile" id="menu--mobile">
+          <div class="btn--close">
+            <i class="bi bi-x-lg"></i>
+          </div>
+    
+          <nav>
+            <ul>
+              <li>
+                  <a href="../index.html">
+                    <div>Home <i class="bi bi-house-door"></i></div>                    
+                  </a>
+              </li>
+              <li>
+                  <a href="./pages/filmes.html">
+                    <div>Filmes <i class="bi bi-film"></i></div> 
+                  </a>
+              </li>
+              <li>
+                  <a href="./pages/series.html">
+                  <div>Séries <i class="bi bi-tv"></i></div> 
+                  </a>
+              </li>
+              <li>
+                  <a href="./pages/contatos.html">
+                  <div> Contato <i class="bi bi-chat-square-text"></i></div>
+                  </a>
+              </li>
+          </ul>
+          </nav>
+         
+        </div> <!-------- MENU MOBILE ------->
+        <div class="overlay--menu" id="overlay--menu"></div>
+
+    </div> <!----Interface ----->   
+
+</header>
+
   <main>
     <section class="hero">
       <div class="hero__container">
@@ -67,7 +109,7 @@
     </section>
     <section class="populares">
       <div class="section__title">
-        <h2 class="title-h2">Populares</h2>
+        <h2 class="title">POPULARES<span></span></h2>
         <a class="btn-MoreSee" href="./pages/series.html">
           Ver mais
           <img src="./assets/plusicongreen.png" alt="">
@@ -88,7 +130,7 @@
             <img src="./assets/THE LAST OF US.png" alt="Capa filme/serie Popular">
           </a>
           <a href="#">
-            <img src="/assets/THE HANDMAID'S TALE.png" alt="Capa filme/serie Popular">
+            <img src="./assets/THE HANDMAID'S TALE.png" alt="Capa filme/serie Popular">
           </a>
           <a href="#">
             <img src="./assets/ANDOR.png" alt="Capa filme/serie Popular">
@@ -97,7 +139,7 @@
       </div>
     </section>
     <section class="top5">
-      <h2 class="title-h2 mb-4">TOP 5</h2>
+      <h2 class="title mb-4">TOP 5<span></span></h2>
       <div class="top5__container">
         <div id="top1" class="top__card">
           <div class="top__card__info">
@@ -148,20 +190,19 @@
     </section>
   </main>
   <footer>
-
     <div class="interface">
       <div class="logo--footer">
-
-        <img src="../assets/coder.png" alt="logo coder flix">
-
-      </div> <!--------- Logo CoderFlix--------->
+        <img src="./assets/coder.png" alt="logo coder flix" />
+      </div>
+      <!--------- Logo CoderFlix--------->
 
       <div class="coders">
-
         <div>
           <ul class="social">
-            <li><span><strong>Igor</strong> Coelho</span></li>
-            <li class="role">Front-end Developer</li>
+            <li>
+              <span><strong>Igor</strong> Coelho</span>
+            </li>
+            <li>Front-end Developer</li>
             <li>
               <a href="#" target="_blank">
                 <i class="bi bi-github"></i>
@@ -175,23 +216,10 @@
         </div>
         <div>
           <ul class="social">
-            <li><span><strong>Anna</strong> Nascimento</span></li>
-            <li class="role">Front-end Developer</li>
             <li>
-              <a href="https://github.com/Anna-csn" target="_blank">
-                <i class="bi bi-github"></i>
-              </a>
-
-              <a href="https://www.linkedin.com/in/annaclaranascimento-ti/" target="_blank">
-                <i class="bi bi-linkedin"></i>
-              </a>
+              <span><strong>Anna</strong> Nascimento</span>
             </li>
-          </ul>
-        </div>
-        <div>
-          <ul class="social">
-            <li><span><strong>Elton</strong> Betoni</span></li>
-            <li class="role">Front-end Developer</li>
+            <li>Front-end Developer</li>
             <li>
               <a href="#" target="_blank">
                 <i class="bi bi-github"></i>
@@ -205,14 +233,36 @@
         </div>
         <div>
           <ul class="social">
-            <li><span><strong>Fabio</strong> Fernandes</span></li>
-            <li class="role">Front-end Developer</li>
+            <li>
+              <span><strong>Elton</strong> Betoni</span>
+            </li>
+            <li>Front-end Developer</li>
+            <li>
+              <a href="#" target="_blank">
+                <i class="bi bi-github"></i>
+              </a>
+
+              <a href="#" target="_blank">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="social">
+            <li>
+              <span><strong>Fabio</strong> Fernandes</span>
+            </li>
+            <li>Front-end Developer</li>
             <li>
               <a href="https://github.com/fernandesfabio" target="_blank">
                 <i class="bi bi-github"></i>
               </a>
 
-              <a href="https://www.linkedin.com/in/fabio-fernandes-20b152166/" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/fabio-fernandes-20b152166/"
+                target="_blank"
+              >
                 <i class="bi bi-linkedin"></i>
               </a>
             </li>
@@ -220,8 +270,10 @@
         </div>
         <div>
           <ul class="social">
-            <li><span><strong>Renata</strong> França</span></li>
-            <li class="role">Front-end Developer</li>
+            <li>
+              <span><strong>Renata</strong> França</span>
+            </li>
+            <li>Front-end Developer</li>
             <li>
               <a href="#" target="_blank">
                 <i class="bi bi-github"></i>
@@ -233,27 +285,28 @@
             </li>
           </ul>
         </div>
-
-      </div> <!----------  Informação dos codres Coders------------>
-    </div><!---------Interface-------------->
+      </div>
+      <!----------  Informação dos codres Coders------------>
+    </div>
+    <!---------Interface-------------->
     <div class="line--footer">
-      <div class="footer__logo">
+      <div class="left">
         <strong><span>CODER</span>FLIX</strong>
         <i class="bi bi-cc-circle"></i>
         <span>2023 - 2023</span>
       </div>
 
-      <div class="footer__copyright">
-        <span class="text--small">Website created by Igor Coelho, Anna Nascimento, Elton Betoni, Fabio
-          Fernandes, Renata França
-        </span>
+      <div class="right">
+        <span class="text--small"
+          >Website created by Igor Coelho, Anna Nascimento, Elton Betoni,
+          Fabio Fernandes, Renata França</span
+        >
+
         <i class="bi bi-cc-circle"></i>
-        <span class="copyright">2023 Copyright</span>
+        2023 Copyright
       </div>
-
-    </div> <!--------- última linha do footer  ---------->
-
-
+    </div>
+    <!--------- última linha do footer  ---------->
   </footer>
 </body>
 

@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../styles/filmes.css">
+    <script src="../script/mobile.js" defer></script>
     <title>CoderFlix</title>
 </head>
 
@@ -52,6 +53,41 @@
 
                 </ul>
             </nav> <!-------- Links de navegação entre as páginas ------->
+            <div class="btn--open" id="btn--open">
+                <i class="bi bi-list"></i>
+              </div>
+              <div class="menu--mobile" id="menu--mobile">
+                <div class="btn--close">
+                  <i class="bi bi-x-lg"></i>
+                </div>
+          
+                <nav>
+                  <ul>
+                    <li>
+                        <a href="../index.html">
+                          <div>Home <i class="bi bi-house-door"></i></div>                    
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./filmes.html">
+                          <div>Filmes <i class="bi bi-film"></i></div> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./series.html">
+                        <div>Séries <i class="bi bi-tv"></i></div> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./contatos.html">
+                        <div> Contato <i class="bi bi-chat-square-text"></i></div>
+                        </a>
+                    </li>
+                </ul>
+                </nav>
+               
+              </div> <!-------- MENU MOBILE ------->
+              <div class="overlay--menu" id="overlay--menu"></div>
 
 
         </div> <!----Interface ----->
