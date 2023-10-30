@@ -20,11 +20,6 @@
     --font-subtitles: 'Montserrat Alternates', sans-serif;
 }
 
-body {
-    background-color: #18181b;
-    color: var(--white);
-  }
-
   /* Header */
 
   .header {
@@ -42,6 +37,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 3.2rem;
+    margin-bottom: -1px;
   }
 
   .nav__link{
@@ -72,19 +68,6 @@ body {
   /* Header */
 
   /* Main */
-
-  section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150vh;
-    margin: 0;
-  }
-
-  .container {
-    display: flex;
-    align-items: center;
-  }
 
   .box {
     width: 400px;
@@ -168,16 +151,6 @@ body {
     border: 1px solid #ccc;
   }
 
-  .form-item {
-    font-size: 12px;
-    position: relative;
-    left: -50px;
-  }
-
-.container2 {
-  margin: 30px;
-}
-
 .container3 {
   display: flex;
   flex-direction: column;
@@ -205,6 +178,7 @@ form {
 .botao {
   display: flex;
   justify-content: center;
+  margin: 10px;
 }
 
 button {
@@ -219,7 +193,6 @@ button {
 /* Footer */
 
 footer > .interface{
-  margin-top: 3.2rem;
   background-color: #212121;
   padding: 1.5rem 4%;
   box-shadow: 0 0 10px 3px #ffffff1d;
