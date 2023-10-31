@@ -6,82 +6,162 @@
   box-sizing: border-box;
 }
 
-body {
+:root{
+  font-size: 62.5%;
+}
+
+body{
   background-color: #18171c;
   height: 100vh;
+  padding-top: 7rem;
 }
-.interface {
-  padding: 2.5rem 4%;
+.interface{
+  padding: 2.5rem 4% ;
+ 
 }
+
 
 /*  NAVBAR */
 
-header {
+header{
   width: 100%;
   background-color: #212121;
+  box-shadow: 0px 2px 10px #464646;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+  position: fixed;
+  z-index: 99997;
+  height: 7rem;
+  top: 0;
+  
+ 
 }
-header > .interface {
+header > .interface{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 4%;
+  padding: 2rem 4%;       
 }
-.logo img {
-  width: 250px;
+.logo img{
+  width: 25rem;   
 }
-.menu--desktop ul {
-  display: flex;
-  list-style: none;
+.menu--desktop ul{
+  display:flex ;
+   list-style: none;  
 }
-.nav--itens {
-  padding: 0rem 1.5rem;
+.nav--itens{        
+  padding: 0rem 2.4rem;
 }
-.nav--link {
+.nav--link{
   text-decoration: none;
-  color: #989696;
-  font-size: 1.1rem;
-  position: relative;
+  color: #989696;       
+  font-size: 1.7rem;
+  position: relative;     
 }
-.nav--link:hover {
+.nav--link:hover{
   color: #fff;
 }
-.nav--link::after {
-  content: ' ';
+.nav--link::after{
+  content: " ";
   width: 0;
-  height: 0.2rem;
-  background-image: linear-gradient(180deg, #278848 0%, #59a928 100%);
+  height: 0.3rem;
+  background-image: linear-gradient(180deg, #278848 0%, #59A928 100%);
   position: absolute;
-  top: 1.7rem;
+  top: 2.6rem;
   left: 0;
   border-radius: 3.1rem;
-  transition: width 0.5s;
+  transition: width 0.5s  ;
 }
-.nav--link:hover::after {
+.nav--link:hover::after{
   width: 100%;
 }
-.nav--active {
+.nav--active{
   color: #fff;
   position: relative;
+  
 }
-.nav--active::after {
-  content: ' ';
+.nav--active::after{
+  content: " ";
   width: 100%;
-  height: 0.2rem;
-  background-image: linear-gradient(180deg, #278848 0%, #59a928 100%);
+  height: 0.3rem;
+  background-image: linear-gradient(180deg, #278848 0%, #59A928 100%);
   position: absolute;
-  top: 1.7rem;
+  top: 2.6rem;
   left: 0;
   border-radius: 3.1rem;
+ 
 }
-.nav--link i {
-  font-size: 1.1rem;
-  margin-right: 0.5rem;
+.nav--link i{
+  font-size: 1.7rem;
+  margin-right: 0.8rem;
+
 }
 
+/* MENU MOBILE */
+
+.btn--open{
+  display: none;
+}
+.btn--open i{
+  color: #59a928;
+  font-size: 30px;
+}
+.btn--close{
+  padding: 20px 5%;
+}
+.btn--close i{
+  font-size: 30px;
+  color: #59a928;
+}
+.menu--mobile{
+  display: none;
+  background-color: #212121;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  width: 0%;
+  overflow: hidden;
+  transition: .2s;
+}
+.menu--mobile.open--menu{
+  width: 40% ;
+}
+.menu--mobile.open--menu ~ .overlay--menu{
+  display: block;
+}
+.menu--mobile nav ul{
+  text-align: right;
+  
+}
+.menu--mobile nav ul li a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+  display: block;
+  padding: 30px 8%;
+  
+}
+.menu--mobile nav ul li a:hover{
+  background-color: #59a928;
+  color: #000;
+}
+.menu--mobile nav ul li a i{
+  margin-left: 1.3rem; 
+}
+.overlay--menu{
+  display: none;
+  background-color: #000000b8;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99998;
+}
 /* MAIN */
-
 main{
   font-family: 'Montserrat', sans-serif;
   }
@@ -90,7 +170,7 @@ main > .interface{
   }
 h2.title{
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 3.2rem;
   text-align: left;
   text-shadow: 0px 2px 4px #ffffff ;
   font-weight: 400;
@@ -101,11 +181,11 @@ h2.title span{
 }
 h2.title span::after{
   content: " ";
-  width: 6.25rem;
-  height: 0.3rem;
+  width: 100px;
+  height: 0.5rem;
   background-image: linear-gradient(180deg, #278848 0%, #59A928 100%);
   position: absolute;
-  top: .8rem;
+  top: 1.5rem;
   left: 10px;
   border-radius: 3.1rem;
 }
@@ -136,48 +216,51 @@ h2.title span::after{
 }
 /* Footer */
 
-footer > .interface {
+footer > .interface{
   background-color: #212121;
-  padding: 1.5rem 4%;
+  box-shadow: 0 0 10px 2px #464646;
+  padding: 2.5rem 4%;
   font-family: 'Montserrat', sans-serif;
 }
-.logo--footer {
+.logo--footer{
   align-items: center;
   text-align: center;
 }
-.logo--footer img {
-  width: 250px;
+.logo--footer img{
+  width: 250px; 
 }
-.coders {
+.coders{       
   width: 100%;
-  padding: 1.3rem;
+  padding: 1.8rem;
   background-color: #212121;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 3.8rem;
 }
-.social {
+.social{
   list-style: none;
-  line-height: 1.6rem;
+  line-height: 2.5rem;
 }
-.social li {
-  color: #fff;
-  text-align: center;
+.social li{
+  color: #fff; 
+  text-align: center; 
+  font-size: 1.8rem;       
 }
-.social a {
+.social a{
   text-decoration: none;
+  
 }
-.social span {
-  color: #59a928;
-  font-size: 1.3rem;
+.social span{
+  color: #59A928;
+  font-size: 1.8rem;
 }
-.social i {
+.social i{
   padding: 0.4rem;
-  color: #59a928;
-  font-size: 1.3rem;
+  color: #59A928;
+  font-size: 1.8rem;    
 }
-.line--footer {
+.line--footer{ 
   display: flex;
   justify-content: space-between;
   background-color: #000;
@@ -185,27 +268,53 @@ footer > .interface {
   padding: 0.6rem 2%;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
 }
 
-.text--small {
-  font-size: 0.8rem;
+.text--small{
+  font-size: 1.1rem
+}
+
+/* BARRA ROLAGHEM*/
+
+::-webkit-scrollbar-track{
+  background-color: #232c3b;
+}
+::-webkit-scrollbar{
+  width: 6px;
+  background: #f4f4f4;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #59a928;
+  border-radius: 5px;
 }
 
 /* RESPONSIVO*/
 
-@media screen and (max-width: 960px){
-    
-    
+@media screen and (max-width: 920px){
+  
   .menu--desktop{
-      display: none;
+    padding: 1.5rem 4%;
+      
+  }
+  .nav--itens{
+    display: none;
   }
   
   /* Main */
   .coders{
       flex-wrap: wrap;
   }
-
-
+  .menu--mobile{
+    display: block;
+  }
+  .btn--open{
+    display: block;
+  }
+  .btn--close{
+    display: block;
+  }
+ 
 }
 @media only screen and (max-width: 640px){
   .logo img{
@@ -216,13 +325,14 @@ footer > .interface {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding: 0.6rem 4% ;
+  padding: 0.6rem 2% ;
   }
- h2.title{
-      font-size: 1.3rem;
+  h2.title{
+    font-size: 1.8rem;
   }
   h2.title span::after{
-      top: .6rem;
+    top: .8rem;
+    width: 50px;
+    height: 0.3rem;
   }
-  
 }
