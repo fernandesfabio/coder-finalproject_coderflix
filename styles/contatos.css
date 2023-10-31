@@ -20,6 +20,7 @@
     --font-subtitles: 'Montserrat Alternates', sans-serif;
 }
 
+
 body{
   background-color: #18171c;
   padding-top: 7rem;
@@ -29,8 +30,11 @@ body{
  
 }
 
+  /* Header */
+
 
 /*  NAVBAR */
+
 
 header{
   width: 100%;
@@ -103,6 +107,15 @@ header > .interface{
 .nav--link i{
   font-size: 1.7rem;
   margin-right: 0.8rem;
+=======
+  .nav__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+    margin-bottom: -1px;
+  }
+
 
 }
 
@@ -175,6 +188,7 @@ header > .interface{
 
   /* Main */
 
+
   section {
     display: flex;
     justify-content: center;
@@ -189,6 +203,7 @@ header > .interface{
     align-items: center;
     padding: 2.5rem 4%;
   }
+
 
   .box {
     width: 400px;
@@ -272,16 +287,6 @@ header > .interface{
     border: 1px solid #ccc;
   }
 
-  .form-item {
-    font-size: 12px;
-    position: relative;
-    left: -50px;
-  }
-
-.container2 {
-  margin: 30px;
-}
-
 .container3 {
   display: flex;
   flex-direction: column;
@@ -309,6 +314,7 @@ form {
 .botao {
   display: flex;
   justify-content: center;
+  margin: 10px;
 }
 
 button {
