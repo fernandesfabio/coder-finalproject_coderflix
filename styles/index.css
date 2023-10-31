@@ -632,23 +632,23 @@ footer > .interface{
   }
 
   #top1{
-    background-image: url(/assets/top1-mobile.png);
+    background-image: url(../assets/top1-mobile.png);
     background-position: center;
   }
   #top2{
-    background-image: url(/assets/top2-mobile.png);
+    background-image: url(../assets/top2-mobile.png);
     background-position: center;
   }
   #top3{
-    background-image: url(/assets/top3-mobile.png);
+    background-image: url(../assets/top3-mobile.png);
     background-position: center;
   }
   #top4{
-    background-image: url(/assets/top4-mobile.png);
+    background-image: url(../assets/top4-mobile.png);
     background-position: center;
   }
   #top5{
-    background-image: url(/assets/top5-mobile.png);
+    background-image: url(../assets/top5-mobile.png);
     background-position: center;
   }
   

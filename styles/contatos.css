@@ -107,17 +107,8 @@ header > .interface{
 .nav--link i{
   font-size: 1.7rem;
   margin-right: 0.8rem;
-=======
-  .nav__menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3.2rem;
-    margin-bottom: -1px;
-  }
-
-
 }
+
 
 /* MENU MOBILE */
 
@@ -193,8 +184,9 @@ header > .interface{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 150vh;
-    margin-top: -10%;
+    height: 100vh;
+    padding: 2.5rem 4%;
+    
     
   }
 
@@ -250,14 +242,13 @@ header > .interface{
     font-size: 12px;
   }
 
-  i {
-    margin-right: 5px;
+  .item a i {
+    margin-right: 10px;
+    color: #80d14a;
+    font-size: 1.6rem;
   }
 
-  i {
-    margin-left: 5px;
-  }
-
+ 
   .box-2 {
     width: 450px;
     height: 500px;
@@ -369,7 +360,7 @@ footer > .interface{
 }
 .social i{
   padding: 0.4rem;
-  color: #59A928;
+  color: #80d14a;
   font-size: 1.8rem;    
 }
 .line--footer{ 
@@ -389,7 +380,7 @@ footer > .interface{
 
 /* BARRA ROLAGHEM*/
 
-/*::-webkit-scrollbar-track{
+::-webkit-scrollbar-track{
   background-color: #232c3b;
 }
 ::-webkit-scrollbar{
@@ -399,7 +390,7 @@ footer > .interface{
 ::-webkit-scrollbar-thumb{
   background-color: #59a928;
   border-radius: 5px;
-}*/
+}
 
 /* RESPONSIVO*/
 
@@ -426,16 +417,22 @@ footer > .interface{
   .btn--close{
     display: block;
   }
-  section{
-    margin-top: -20%;
-       
-  }
-  .container{
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 2.5rem 4%;
-  }
  
+}
+@media screen and (max-width: 865px){
+  main{
+    padding: 06rem;
+  }
+  section{
+    flex-direction: column-reverse;
+    }
+  .box {
+    width: 450px;
+    height: 500px;
+  }
+    footer{
+      
+    }
 }
 @media only screen and (max-width: 640px){
   .logo img{
@@ -457,17 +454,17 @@ footer > .interface{
     height: 0.3rem;
   }
   section{
-    margin-top: 15%;
+    padding: 2.5rem 10%;
+   
   }
-  .container{
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 2.5rem 4%;
+  .box-2 {
+    width: 400px;
+    height: 500px;
+   }
+   .box {
+    width: 400px;
+    height: 500px;
+   }
   }
-  
-}
-  
 
-  
-  
  
