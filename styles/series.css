@@ -104,7 +104,7 @@ header > .interface{
   }
   .btn--open i{
     color: #59a928;
-    font-size: 30px;
+    font-size: 40px;
   }
   .btn--close{
     padding: 20px 5%;
@@ -126,7 +126,7 @@ header > .interface{
     transition: .2s;
   }
   .menu--mobile.open--menu{
-    width: 40% ;
+    width: 70% ;
   }
   .menu--mobile.open--menu ~ .overlay--menu{
     display: block;
