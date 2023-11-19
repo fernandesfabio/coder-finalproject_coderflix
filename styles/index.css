@@ -67,7 +67,8 @@ header > .interface{
 .nav--link{
   text-decoration: none;
   color: #989696;       
-  font-size: 1.7rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
   position: relative;     
 }
 .nav--link:hover{
@@ -79,7 +80,7 @@ header > .interface{
   height: 0.3rem;
   background-image: linear-gradient(180deg, #278848 0%, #59A928 100%);
   position: absolute;
-  top: 2.5rem;
+  top: 2.4rem;
   left: 30px;
   border-radius: 3.1rem;
   transition: width 0.5s  ;
@@ -98,14 +99,14 @@ header > .interface{
   height: 0.3rem;
   background-image: linear-gradient(180deg, #278848 0%, #59A928 100%);
   position: absolute;
-  top: 2.5rem;
+  top: 2.4rem;
   left: 30px;
   border-radius: 3.1rem;
  
 }
 
 .nav--itens i{
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   margin-right: 0.8rem;
 
 }
@@ -151,8 +152,9 @@ header > .interface{
 .menu--mobile nav ul li a{
   text-decoration: none;
   color: #fff;
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: 400;
+  text-transform: uppercase;
   display: block;
   padding: 30px 8%;
   
@@ -292,7 +294,7 @@ h2.title{
   color: #fff;
   font-size: 3.2rem;
   text-align: left;
-  text-shadow: 0px 1px 3px #ffffff;
+  text-shadow: 0px 2px 4px #ffffff;
   font-weight: 400;
   
 }
@@ -319,7 +321,6 @@ h2.title span::after{
   font-size: 1.4rem;
   line-height: 2.2rem;
   font-weight: 600;
-  text-shadow: 0px 1px 3px #000;
   color: var(--white);
 }
 
@@ -331,6 +332,39 @@ h2.title span::after{
 .btn-MoreSee:hover {
   color: var(--christi-400);
 }
+
+/* Cards Imagens Populares */
+
+.cards__container {
+  max-width: 1200px;
+  width: 95%;
+}
+.cards__container .slide-button {
+  display: none;
+}
+.slider-wrapper .image-list {
+  display: grid;
+  gap: 18px;
+  font-size: 0;  
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 20px;
+  grid-template-columns: repeat(6, 1fr);
+}
+.slider-wrapper .image-list::-webkit-scrollbar {
+  display: none;
+}
+.slider-wrapper .image-list img {
+  width: auto;
+  object-fit: cover;
+  max-height: 245px; 
+  border: none;
+  border-radius: 15px;
+  box-shadow: #070707 0px 8px 12px;
+  transition: .5s;
+}
+
+/*
 .cards {
   display: flex;
   overflow-y: hidden;
@@ -353,7 +387,7 @@ h2.title span::after{
 .cards img:hover{
   transform: scale(1.05);
 }
-
+*/
 .top5__container {
   display: flex;
   flex-direction: column;
@@ -368,12 +402,6 @@ h2.title span::after{
   width: 100%;
   transition: .5s;
 }
-.top__card:hover{
-  border: solid #fff;
-  
-  
-}
-
 .top__card__info {
   display: flex;
   align-items: center;
@@ -394,6 +422,7 @@ h2.title span::after{
   font-family: var(--font-primary);
   font-weight: 700;
   color: var(--white);
+  box-sizing: border-box;
 }
 
 .top__info {
@@ -428,8 +457,11 @@ h2.title span::after{
   background-size: cover;
   background-position: right;
   box-shadow: #070707 8px 8px 12px;
-  position: relative;
-  
+  position: relative; 
+}
+#top1:hover {
+  border: 2px solid #ffffff;
+  box-sizing:border-box;
 }
 
 #top2 {
@@ -438,8 +470,12 @@ h2.title span::after{
   background-size: cover;
   background-position: right;
   box-shadow: #070707 8px 8px 12px;
+  box-sizing: content-box;
   position: relative;
-  
+}
+#top2:hover {
+  border: 2px solid #ffffff;
+  box-sizing:border-box;
 }
 
 #top3{
@@ -451,6 +487,10 @@ h2.title span::after{
   position: relative;
   
 }
+#top3:hover {
+  border: 2px solid #ffffff;
+  box-sizing:border-box;
+}
 
 #top4 {
   background-image: url(../assets/top4.png);
@@ -461,6 +501,10 @@ h2.title span::after{
   position: relative;
   
 }
+#top4:hover {
+  border: 2px solid #ffffff;
+  box-sizing:border-box;
+}
 
 #top5 {
   background-image: url(../assets/top5.png);
@@ -470,6 +514,10 @@ h2.title span::after{
   box-shadow: #070707 8px 8px 12px;
   position: relative;
   
+}
+#top5:hover {
+  border: 2px solid #ffffff;
+  box-sizing:border-box;
 }
 
 /* Footer */
@@ -551,6 +599,73 @@ footer > .interface{
 
 /* RESPONSIVO*/
 
+@media screen and (max-width: 1200px){
+  .slider-wrapper{
+    position: relative;
+  }
+  .slider-wrapper .slide-button {
+    display: block;
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    color: #80d14a;
+    outline: none;
+    font-size: 2.2rem;
+    font-weight: 600;
+    background-color: #212121;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+  .slider-wrapper .slide-button:hover{
+    background: #444;
+  }
+  .slider-wrapper .slide-button#prev-slide {
+    left: -20px;
+  }
+  .slider-wrapper .slide-button#next-slide {
+    right: -20px;
+  }
+  .cards__container .slider-scrollbar {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .slider-scrollbar .scrollbar-track {
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    position: relative;
+    border-radius: 5px;
+  }
+  .slider-scrollbar:hover .scrollbar-track {
+    height: 4px;
+  }
+  .slider-scrollbar .scrollbar-thumb {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: #80d14a;
+    border-radius: inherit;
+    cursor: grab;
+  }
+  .slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+  }
+  .slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+  }
+}
 @media screen and (max-width: 920px){
     
   header > .interface {
@@ -649,6 +764,7 @@ footer > .interface{
     color: var(--white);
     font-size: 1.5rem;
     line-height: 1.5rem;
+    text-shadow: 1px 1px 1px #070707;
    
   }
   .cards img{

@@ -13,3 +13,22 @@ menu.addEventListener('click', ()=>{
 overlay.addEventListener('click', ()=>{
     menu.classList.remove('open--menu')
 })
+
+
+
+
+const initSlider = () => {
+    const imageList= document.querySelector('[data-slide="list"]');
+    const slideButtons = document.querySelectorAll('[data-slide="slide-btn"]');
+
+    slideButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const direction = button.id === "prev-slide" ? -1 : 1;
+        const scrollAmount = imageList.clientWidth * direction;
+        imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+    });
+}
+
+window/addEventListener("load", initSlider)
+
