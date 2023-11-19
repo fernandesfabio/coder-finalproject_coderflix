@@ -26,15 +26,13 @@ body{
 header{
     width: 100%;
     background-color: #212121;
-    box-shadow: 0px 2px 10px #464646;
+    box-shadow: 0px 2px 10px #070707;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     position: fixed;
     z-index: 99997;
     height: 7rem;
-    top: 0;
-    
-   
+    top: 0;   
 }
 header > .interface{
     display: flex;
@@ -68,12 +66,12 @@ header > .interface{
     background-image: linear-gradient(180deg, #278848 0%, #59A928 100%);
     position: absolute;
     top: 2.6rem;
-    left: 0;
+    left: 30px;
     border-radius: 3.1rem;
     transition: width 0.5s  ;
   }
   .nav--link:hover::after{
-    width: 100%;
+    width: 65%;
   }
   .nav--active{
     color: #fff;
@@ -82,12 +80,12 @@ header > .interface{
   }
   .nav--active::after{
     content: " ";
-    width: 100%;
+    width: 65%;
     height: 0.3rem;
     background-image: linear-gradient(180deg, #278848 0%, #59A928 100%);
     position: absolute;
     top: 2.6rem;
-    left: 0;
+    left: 30px;
     border-radius: 3.1rem;
    
   }
@@ -195,8 +193,8 @@ h2.title span::after{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(180px,auto));
     gap: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 .box{
     width: 100%;
@@ -208,6 +206,7 @@ h2.title span::after{
     object-fit: cover;
     cursor: pointer;
     border-radius: 10px;
+    box-shadow: #070707 5px 5px 12px;
     transition: 0.3s;
 }
 .box img:hover{
@@ -219,7 +218,7 @@ h2.title span::after{
 
 footer > .interface{
     background-color: #212121;
-    box-shadow: 0 0 10px 2px #464646;
+    box-shadow: 0 0 10px 2px #070707;
     padding: 2.5rem 4%;
     font-family: 'Montserrat', sans-serif;
   }
@@ -293,7 +292,10 @@ footer > .interface{
 
 @media screen and (max-width: 920px){
     
-    .menu--desktop{
+  header > .interface {
+    padding: 1rem 4%;
+  }
+  .menu--desktop{
       padding: 1.5rem 4%;
         
     }
