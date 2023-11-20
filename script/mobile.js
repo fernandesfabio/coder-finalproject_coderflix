@@ -1,3 +1,10 @@
+/* Navbar */
+window.addEventListener("scroll", function(){
+    let header = this.document.querySelector('#header');
+    header.classList.toggle('rolagem',window.scrollY > 0);
+})
+
+/*Menu Mobile*/
 let bntMenu = document.getElementById('btn--open')
 let menu = document.getElementById('menu--mobile')
 let overlay = document.getElementById('overlay--menu')
