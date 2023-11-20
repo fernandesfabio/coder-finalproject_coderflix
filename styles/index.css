@@ -193,7 +193,7 @@ header > .interface{
 
 .hero {
   background-image: url(../assets/HeroImg.png);
-  height: 60rem;
+  min-height: 56rem;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -283,7 +283,7 @@ header > .interface{
 }
 
 .populares, .top5 {
-  margin: 3.2rem 5rem;
+  margin: 3rem ;
 }
 
 .section__title {
@@ -340,8 +340,7 @@ h2.title span::after{
 
 .cards__container {
   max-width: 1200px;
-  width: 100%;
-  padding: 0 2%;
+  width: 95%;
 
 }
 .cards__container .slide-button {
@@ -373,6 +372,7 @@ h2.title span::after{
   flex-direction: column;
   gap: 1.6rem;
   padding: 20px;
+  align-items: center;
 }
 
 .top__card {
@@ -381,6 +381,7 @@ h2.title span::after{
   border-radius: 1.2rem;
   width: 100%;
   transition: .5s;
+  align-items: center;
 }
 .top__card__info {
   display: flex;
@@ -407,6 +408,7 @@ h2.title span::after{
 
 .top__info {
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 1.6rem;
 }
@@ -564,7 +566,7 @@ footer > .interface{
 
 
 /* BARRA ROLAGHEM*/
-
+/*
 ::-webkit-scrollbar-track{
   background-color: #232c3b;
 }
@@ -575,7 +577,7 @@ footer > .interface{
 ::-webkit-scrollbar-thumb{
   background-color: #59a928;
   border-radius: 5px;
-}
+}*/
 
 /* RESPONSIVO*/
 
@@ -603,49 +605,14 @@ footer > .interface{
     background: #444;
   }
   .slider-wrapper .slide-button#prev-slide {
-    left: -30px;
+    left: -25px;
     display: none;
   }
   .slider-wrapper .slide-button#next-slide {
-    right: -30px;
+    right: -25px;
+    
   }
-  .cards__container .slider-scrollbar {
-    height: 24px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-  }
-  .slider-scrollbar .scrollbar-track {
-    height: 2px;
-    width: 100%;
-    background: #ccc;
-    position: relative;
-    border-radius: 5px;
-  }
-  .slider-scrollbar:hover .scrollbar-track {
-    height: 4px;
-  }
-  .slider-scrollbar .scrollbar-thumb {
-    position: absolute;
-    height: 100%;
-    width: 50%;
-    background: #80d14a;
-    border-radius: inherit;
-    cursor: grab;
-  }
-  .slider-scrollbar .scrollbar-thumb:active {
-    cursor: grabbing;
-    height: 8px;
-    top: -2px;
-  }
-  .slider-scrollbar .scrollbar-thumb::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -10px;
-    bottom: -10px;
-  }
+  
 }
 @media screen and (max-width: 920px){
     
@@ -749,7 +716,7 @@ footer > .interface{
   .top__info--title {
     font-size: 1.3rem;
     align-items: center;
-    margin-left: -2rem;
+    margin-left: 1rem;
     text-shadow: 1px 1px 1px #070707;
   
   }
