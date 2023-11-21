@@ -297,7 +297,7 @@ h2.title{
   color: #fff;
   font-size: 3.2rem;
   text-align: left;
-  text-shadow: 0px 2px 4px #ffffff;
+  text-shadow: 0px 1px 3px #fff;
   font-weight: 400;
   
 }
@@ -365,7 +365,10 @@ h2.title span::after{
   border: none;
   border-radius: 15px;
   box-shadow: #070707 0px 8px 12px;
-  transition: .5s;
+  transition: .3s;
+}
+.image-list img:hover {
+  transform: scale(1.05);
 }
 .top5__container {
   display: flex;
@@ -440,10 +443,10 @@ h2.title span::after{
   background-position: right;
   box-shadow: #070707 8px 8px 12px;
   position: relative; 
+  transition: .3s;
 }
 #top1:hover {
-  border: 2px solid #ffffff;
-  box-sizing:border-box;
+  transform: scale(1.02);
 }
 
 #top2 {
@@ -454,10 +457,10 @@ h2.title span::after{
   box-shadow: #070707 8px 8px 12px;
   box-sizing: content-box;
   position: relative;
+  transition: .3s;
 }
 #top2:hover {
-  border: 2px solid #ffffff;
-  box-sizing:border-box;
+  transform: scale(1.02);
 }
 
 #top3{
@@ -467,11 +470,11 @@ h2.title span::after{
   background-position: right;
   box-shadow: #070707 8px 8px 12px;
   position: relative;
+  transition: .3s;
   
 }
 #top3:hover {
-  border: 2px solid #ffffff;
-  box-sizing:border-box;
+  transform: scale(1.02);
 }
 
 #top4 {
@@ -481,11 +484,11 @@ h2.title span::after{
   background-position: right;
   box-shadow: #070707 8px 8px 12px;
   position: relative;
+  transition: .3s;
   
 }
 #top4:hover {
-  border: 2px solid #ffffff;
-  box-sizing:border-box;
+  transform: scale(1.02);
 }
 
 #top5 {
@@ -495,11 +498,11 @@ h2.title span::after{
   background-position: right;
   box-shadow: #070707 8px 8px 12px;
   position: relative;
+  transition: .3s;
   
 }
 #top5:hover {
-  border: 2px solid #ffffff;
-  box-sizing:border-box;
+  transform: scale(1.02);
 }
 
 /* Footer */
