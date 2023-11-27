@@ -12,7 +12,7 @@
         rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../styles/filmes.css">
-    <script src="../script/mobile.js" defer></script>
+    <script src="../script/movie.js" defer></script>
     <title>CoderFlix</title>
 </head>
 
@@ -94,6 +94,15 @@
         </div> <!----Interface ----->
 
     </header>
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      
+        <!-- Overlay content -->
+        <div class="overlay-content" id="overlay-content"></div>
+      
+      </div>
 
     <main>
         <section>
@@ -101,223 +110,10 @@
             <div class="interface">
                 <h2 class="title">TODOS OS FILMES<span></span></h2>
 
-                <div class="movies--container">
-                    <!-----BOX 1------->
-                    <div class="box">
-                        <img src="https://img.elo7.com.br/product/original/39EBAC9/big-poster-filme-cruella-2021-lo02-tamanho-90x60-cm-poster.jpg"
-                            alt="Cruella" />
-                    </div>
-                    <!-------- BOX 2--------->
-                    <div class="box">
-                        <img src="https://s2-marieclaire.glbimg.com/T_DX6ffqPGvmu5rvV2neO9uK1mM=/0x0:1382x2048/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2023/u/n/y0xBC1SIy2idfpVSornQ/barbie-posteres.jpg"
-                            alt="Barbie" />
-                    </div>
-                    <!-------- BOX 3--------->
-                    <div class="box">
-                        <img src="https://s2-quem.glbimg.com/3z8-k5nym8Jf_9P5fpxDy3QF_5o=/0x0:1080x1354/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b0f0e84207c948ab8b8777be5a6a4395/internal_photos/bs/2023/C/P/nyYLEBTrKK3BA8FM5KDg/snapinsta.app-340480151-913313723215589-6099772742013153953-n-1080.jpg"
-                            alt="The Mother" />
-                    </div>
-                    <!-------- BOX 4--------->
-                    <div class="box">
-                        <img src="https://img.elo7.com.br/product/original/39EBAC9/big-poster-filme-cruella-2021-lo02-tamanho-90x60-cm-poster.jpg"
-                            alt="Cruella" />
-                    </div>
-                    <!-------- BOX 5--------->
-                    <div class="box">
-                        <img src="https://s2-marieclaire.glbimg.com/T_DX6ffqPGvmu5rvV2neO9uK1mM=/0x0:1382x2048/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2023/u/n/y0xBC1SIy2idfpVSornQ/barbie-posteres.jpg"
-                            alt="Barbie" />
-                    </div>
-                    <!-------- BOX 6--------->
-                    <div class="box">
-                        <img src="https://s2-quem.glbimg.com/3z8-k5nym8Jf_9P5fpxDy3QF_5o=/0x0:1080x1354/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b0f0e84207c948ab8b8777be5a6a4395/internal_photos/bs/2023/C/P/nyYLEBTrKK3BA8FM5KDg/snapinsta.app-340480151-913313723215589-6099772742013153953-n-1080.jpg"
-                            alt="The Mother" />
-                    </div>
-                    <!-------- BOX 7--------->
-                    <div class="box">
-                        <img src="https://img.elo7.com.br/product/original/39EBAC9/big-poster-filme-cruella-2021-lo02-tamanho-90x60-cm-poster.jpg"
-                            alt="Cruella" />
-                    </div>
-                    <!-------- BOX 8--------->
-                    <div class="box">
-                        <img src="https://s2-marieclaire.glbimg.com/T_DX6ffqPGvmu5rvV2neO9uK1mM=/0x0:1382x2048/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2023/u/n/y0xBC1SIy2idfpVSornQ/barbie-posteres.jpg"
-                            alt="Barbie" />
-                    </div>
-                    <!-------- BOX 9--------->
-                    <div class="box">
-                        <img src="https://s2-quem.glbimg.com/3z8-k5nym8Jf_9P5fpxDy3QF_5o=/0x0:1080x1354/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b0f0e84207c948ab8b8777be5a6a4395/internal_photos/bs/2023/C/P/nyYLEBTrKK3BA8FM5KDg/snapinsta.app-340480151-913313723215589-6099772742013153953-n-1080.jpg"
-                            alt="The Mother" />
-                    </div>
-                    <!-------- BOX 10--------->
-                    <div class="box">
-                        <img src="https://img.elo7.com.br/product/original/39EBAC9/big-poster-filme-cruella-2021-lo02-tamanho-90x60-cm-poster.jpg"
-                            alt="Cruella" />
-                    </div>
-                    <!-------- BOX 11--------->
-                    <div class="box">
-                        <img src="https://s2-marieclaire.glbimg.com/T_DX6ffqPGvmu5rvV2neO9uK1mM=/0x0:1382x2048/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2023/u/n/y0xBC1SIy2idfpVSornQ/barbie-posteres.jpg"
-                            alt="Barbie" />
-                    </div>
-                    <!-------- BOX 12--------->
-                    <div class="box">
-                        <img src="https://s2-quem.glbimg.com/3z8-k5nym8Jf_9P5fpxDy3QF_5o=/0x0:1080x1354/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b0f0e84207c948ab8b8777be5a6a4395/internal_photos/bs/2023/C/P/nyYLEBTrKK3BA8FM5KDg/snapinsta.app-340480151-913313723215589-6099772742013153953-n-1080.jpg"
-                            alt="The Mother" />
-                    </div>
-                    <!-------- BOX 13--------->
-                    <div class="box">
-                        <img src="https://img.elo7.com.br/product/original/39EBAC9/big-poster-filme-cruella-2021-lo02-tamanho-90x60-cm-poster.jpg"
-                            alt="Cruella" />
-                    </div>
-                    <!-------- BOX 14--------->
-                    <div class="box">
-                        <img src="https://s2-marieclaire.glbimg.com/T_DX6ffqPGvmu5rvV2neO9uK1mM=/0x0:1382x2048/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2023/u/n/y0xBC1SIy2idfpVSornQ/barbie-posteres.jpg"
-                            alt="Barbie" />
-                    </div>
-                    <!-------- BOX 15--------->
-                    <div class="box">
-                        <img src="https://s2-quem.glbimg.com/3z8-k5nym8Jf_9P5fpxDy3QF_5o=/0x0:1080x1354/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b0f0e84207c948ab8b8777be5a6a4395/internal_photos/bs/2023/C/P/nyYLEBTrKK3BA8FM5KDg/snapinsta.app-340480151-913313723215589-6099772742013153953-n-1080.jpg"
-                            alt="The Mother" />
-                    </div>
-                    <!-------- BOX 16--------->
-                    <div class="box">
-                        <img src="https://img.elo7.com.br/product/original/39EBAC9/big-poster-filme-cruella-2021-lo02-tamanho-90x60-cm-poster.jpg"
-                            alt="Cruella" />
-                    </div>
-                    <!-------- BOX 17--------->
-                    <div class="box">
-                        <img src="https://s2-marieclaire.glbimg.com/T_DX6ffqPGvmu5rvV2neO9uK1mM=/0x0:1382x2048/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2023/u/n/y0xBC1SIy2idfpVSornQ/barbie-posteres.jpg"
-                            alt="Barbie" />
-                    </div>
-                    <!-------- BOX 18--------->
-                    <div class="box">
-                        <img src="https://s2-quem.glbimg.com/3z8-k5nym8Jf_9P5fpxDy3QF_5o=/0x0:1080x1354/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b0f0e84207c948ab8b8777be5a6a4395/internal_photos/bs/2023/C/P/nyYLEBTrKK3BA8FM5KDg/snapinsta.app-340480151-913313723215589-6099772742013153953-n-1080.jpg"
-                            alt="The Mother" />
-                    </div>
-                    <!-------- BOX 19--------->
-                    <div class="box">
-                        <img src="https://img.elo7.com.br/product/original/39EBAC9/big-poster-filme-cruella-2021-lo02-tamanho-90x60-cm-poster.jpg"
-                            alt="Cruella" />
-                    </div>
-                    <!-------- BOX 20--------->
-                    <div class="box">
-                        <img src="https://s2-marieclaire.glbimg.com/T_DX6ffqPGvmu5rvV2neO9uK1mM=/0x0:1382x2048/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2023/u/n/y0xBC1SIy2idfpVSornQ/barbie-posteres.jpg"
-                            alt="Barbie" />
-                    </div>
-                    <!-------- BOX 21--------->
-                    <div class="box">
-                        <img src="https://s2-quem.glbimg.com/3z8-k5nym8Jf_9P5fpxDy3QF_5o=/0x0:1080x1354/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b0f0e84207c948ab8b8777be5a6a4395/internal_photos/bs/2023/C/P/nyYLEBTrKK3BA8FM5KDg/snapinsta.app-340480151-913313723215589-6099772742013153953-n-1080.jpg"
-                            alt="The Mother" />
-                    </div>
-                    <!-------- BOX 22--------->
-                    <div class="box">
-                        <img src="https://img.elo7.com.br/product/original/39EBAC9/big-poster-filme-cruella-2021-lo02-tamanho-90x60-cm-poster.jpg"
-                            alt="Cruella" />
-
-                    </div>
-                    <!-------- BOX 23--------->
-                    <div class="box">
-                        <img src="https://s2-marieclaire.glbimg.com/T_DX6ffqPGvmu5rvV2neO9uK1mM=/0x0:1382x2048/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2023/u/n/y0xBC1SIy2idfpVSornQ/barbie-posteres.jpg"
-                            alt="Barbie" />
-                    </div>
-                    <!-------- BOX 24--------->
-                    <div class="box">
-                        <img src="https://s2-quem.glbimg.com/3z8-k5nym8Jf_9P5fpxDy3QF_5o=/0x0:1080x1354/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b0f0e84207c948ab8b8777be5a6a4395/internal_photos/bs/2023/C/P/nyYLEBTrKK3BA8FM5KDg/snapinsta.app-340480151-913313723215589-6099772742013153953-n-1080.jpg"
-                            alt="The Mother" />
-                    </div>
-                    <!-------- BOX 25--------->
-                    <div class="box">
-                        <img src="https://img.elo7.com.br/product/original/39EBAC9/big-poster-filme-cruella-2021-lo02-tamanho-90x60-cm-poster.jpg"
-                            alt="Cruella" />
-                    </div>
-                    <!-------- BOX 26--------->
-                    <div class="box">
-                        <img src="https://s2-marieclaire.glbimg.com/T_DX6ffqPGvmu5rvV2neO9uK1mM=/0x0:1382x2048/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2023/u/n/y0xBC1SIy2idfpVSornQ/barbie-posteres.jpg"
-                            alt="Barbie" />
-                    </div>
-                    <!-------- BOX 27--------->
-                    <div class="box">
-                        <img src="https://s2-quem.glbimg.com/3z8-k5nym8Jf_9P5fpxDy3QF_5o=/0x0:1080x1354/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b0f0e84207c948ab8b8777be5a6a4395/internal_photos/bs/2023/C/P/nyYLEBTrKK3BA8FM5KDg/snapinsta.app-340480151-913313723215589-6099772742013153953-n-1080.jpg"
-                            alt="The Mother" />
-                    </div>
-                    <!-------- BOX 28--------->
-                    <div class="box">
-                        <img src="https://img.elo7.com.br/product/original/39EBAC9/big-poster-filme-cruella-2021-lo02-tamanho-90x60-cm-poster.jpg"
-                            alt="Cruella" />
-                    </div>
-                    <!-------- BOX 29--------->
-                    <div class="box">
-                        <img src="https://s2-marieclaire.glbimg.com/T_DX6ffqPGvmu5rvV2neO9uK1mM=/0x0:1382x2048/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2023/u/n/y0xBC1SIy2idfpVSornQ/barbie-posteres.jpg"
-                            alt="Barbie" />
-                    </div>
-                    <!-------- BOX 30--------->
-                    <div class="box">
-                        <img src="https://s2-quem.glbimg.com/3z8-k5nym8Jf_9P5fpxDy3QF_5o=/0x0:1080x1354/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b0f0e84207c948ab8b8777be5a6a4395/internal_photos/bs/2023/C/P/nyYLEBTrKK3BA8FM5KDg/snapinsta.app-340480151-913313723215589-6099772742013153953-n-1080.jpg"
-                            alt="The Mother" />
-                    </div>
-                    <!-------- BOX 31--------->
-                    <div class="box">
-                        <img src="https://img.elo7.com.br/product/original/39EBAC9/big-poster-filme-cruella-2021-lo02-tamanho-90x60-cm-poster.jpg"
-                            alt="Cruella" />
-                    </div>
-                    <!-------- BOX 32--------->
-                    <div class="box">
-                        <img src="https://s2-marieclaire.glbimg.com/T_DX6ffqPGvmu5rvV2neO9uK1mM=/0x0:1382x2048/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2023/u/n/y0xBC1SIy2idfpVSornQ/barbie-posteres.jpg"
-                            alt="Cruella" />
-                    </div>
-                    <!-------- BOX 33--------->
-                    <div class="box">
-                        <img src="https://s2-quem.glbimg.com/3z8-k5nym8Jf_9P5fpxDy3QF_5o=/0x0:1080x1354/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b0f0e84207c948ab8b8777be5a6a4395/internal_photos/bs/2023/C/P/nyYLEBTrKK3BA8FM5KDg/snapinsta.app-340480151-913313723215589-6099772742013153953-n-1080.jpg"
-                            alt="The Mother" />
-                    </div>
-                    <!-------- BOX 34--------->
-                    <div class="box">
-                        <img src="https://img.elo7.com.br/product/original/39EBAC9/big-poster-filme-cruella-2021-lo02-tamanho-90x60-cm-poster.jpg"
-                            alt="Cruella" />
-                    </div>
-                    <!-------- BOX 35--------->
-                    <div class="box">
-                        <img src="https://s2-marieclaire.glbimg.com/T_DX6ffqPGvmu5rvV2neO9uK1mM=/0x0:1382x2048/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2023/u/n/y0xBC1SIy2idfpVSornQ/barbie-posteres.jpg"
-                            alt="Barbie" />
-                    </div>
-                    <!-------- BOX 36--------->
-                    <div class="box">
-                        <img src="https://s2-quem.glbimg.com/3z8-k5nym8Jf_9P5fpxDy3QF_5o=/0x0:1080x1354/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b0f0e84207c948ab8b8777be5a6a4395/internal_photos/bs/2023/C/P/nyYLEBTrKK3BA8FM5KDg/snapinsta.app-340480151-913313723215589-6099772742013153953-n-1080.jpg"
-                            alt="The Mother" />
-                    </div>
-                    <!-------- BOX 37--------->
-                    <div class="box">
-                        <img src="https://img.elo7.com.br/product/original/39EBAC9/big-poster-filme-cruella-2021-lo02-tamanho-90x60-cm-poster.jpg"
-                            alt="Cruella" />
-                    </div>
-                    <!-------- BOX 38--------->
-                    <div class="box">
-                        <img src="https://s2-marieclaire.glbimg.com/T_DX6ffqPGvmu5rvV2neO9uK1mM=/0x0:1382x2048/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2023/u/n/y0xBC1SIy2idfpVSornQ/barbie-posteres.jpg"
-                            alt="Barbie" />
-                    </div>
-                    <!-------- BOX 39--------->
-                    <div class="box">
-                        <img src="https://s2-quem.glbimg.com/3z8-k5nym8Jf_9P5fpxDy3QF_5o=/0x0:1080x1354/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b0f0e84207c948ab8b8777be5a6a4395/internal_photos/bs/2023/C/P/nyYLEBTrKK3BA8FM5KDg/snapinsta.app-340480151-913313723215589-6099772742013153953-n-1080.jpg"
-                            alt="The Mother" />
-                    </div>
-                    <!-------- BOX 40--------->
-                    <div class="box">
-                        <img src="https://img.elo7.com.br/product/original/39EBAC9/big-poster-filme-cruella-2021-lo02-tamanho-90x60-cm-poster.jpg"
-                            alt="Cruella" />
-                    </div>
-                    <!-------- BOX 41--------->
-                    <div class="box">
-                        <img src="https://s2-marieclaire.glbimg.com/T_DX6ffqPGvmu5rvV2neO9uK1mM=/0x0:1382x2048/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_51f0194726ca4cae994c33379977582d/internal_photos/bs/2023/u/n/y0xBC1SIy2idfpVSornQ/barbie-posteres.jpg"
-                            alt="Barbie" />
-                    </div>
-                    <!-------- BOX 42--------->
-                    <div class="box">
-                        <img src="https://s2-quem.glbimg.com/3z8-k5nym8Jf_9P5fpxDy3QF_5o=/0x0:1080x1354/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b0f0e84207c948ab8b8777be5a6a4395/internal_photos/bs/2023/C/P/nyYLEBTrKK3BA8FM5KDg/snapinsta.app-340480151-913313723215589-6099772742013153953-n-1080.jpg"
-                            alt="The Mother" />
-                    </div>
-                </div>
+                <div class="box--container" id="movies--container">
+                </div>    
 
             </div> <!-------------Cards dos Filmes----------->
-
-         <!--------------Container Catálogo de Filmes------>
 
         </section>
 
