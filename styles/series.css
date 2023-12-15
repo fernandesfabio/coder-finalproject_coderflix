@@ -202,6 +202,8 @@ h2.title span::after{
   gap: 2rem;
   margin-top: 5rem;
   margin-bottom: 5rem;
+  padding: 2rem;
+  margin-right: 20px;
 }
 .box{
 width: 100%;
@@ -220,19 +222,25 @@ overflow: hidden;
   cursor: pointer;
 }
 .box--info{
-color: #eee;
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 1.3rem 2.3rem 2.5rem;
-letter-spacing: 0.5px;
-}
-.box--info span{
-background-color: #18171c;
-padding: .8rem .5rem;
-border-radius: 3px;
-font-weight: bold;
-}
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.3rem 2.3rem 2.5rem 2rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  font-size: 8px;
+  
+  }
+  .box--info span{
+  background-color: #18171c;
+  padding: .8rem .5rem;
+  border-radius: 3px;
+  font-weight: bold;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: center;
+  }
 .box--info span.green{
 color: lightgreen;
 }
@@ -250,6 +258,7 @@ bottom: 0;
 background-color: #fff;
 padding: 2.3rem;
 max-height: 100%;
+
 transform: translateY(101%);
 }
 .box:hover .box--overview{
@@ -258,12 +267,14 @@ transform: translateY(0);
 .know-more{
 background-color: #fd0404;
 color: #fff;
-font: 1.3rem;
+font: 1.1rem;
 font-weight: bold;
 border: 0;
 border-radius: 50px;
-padding: 1rem 1.3rem;
+padding: 0.3rem 0.8rem;
 margin-top: 1rem;
+
+cursor: pointer;
 }
 
 /* Footer */

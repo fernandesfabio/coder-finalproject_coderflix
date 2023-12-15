@@ -603,6 +603,7 @@ footer > .interface{
     border-radius: 50%;
     cursor: pointer;
     transform: translateY(-50%);
+    z-index: 1111;
   }
   .slider-wrapper .slide-button:hover{
     background: #444;
