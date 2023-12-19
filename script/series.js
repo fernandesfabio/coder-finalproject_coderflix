@@ -27,26 +27,23 @@ overlay.addEventListener('click', ()=>{
 
 // TMDB API //
 
-const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZTM2ZmM4YTAwZDgyODc1MTFiYWFjMDUwM2U1NTg1NCIsInN1YiI6IjY1NjI4MzRlMzY3OWExMDk3N2UwY2ZiZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.dOmmZZ_EakO2qkVa6JMZqC-ijgO5UY_CZaXdoeUk0U0'
-    }
-  };
-  const IMG_URL = 'https://image.tmdb.org/t/p/w500';
+const API_KEY = 'api_key=1e36fc8a00d8287511baac0503e55854'
+const BASE_URL = 'https://api.themoviedb.org/3'
+const API_URL = BASE_URL + '/discover/tv?include_adult=false&include_video=true&language=pt-BR&page=1&sort_by=popularity.desc&' + API_KEY
+const IMG_URL = 'https://image.tmdb.org/t/p/w500'
+const SEARCH_URL = BASE_URL + '/search/tv?'+API_KEY;
 
   const container = document.getElementById('series--container');
   const form = document.getElementById('form');
   const search = document.getElementById('search');
-  
-  fetch('https://api.themoviedb.org/3/discover/tv?include_adult=false&include_null_first_air_dates=false&language=pt-BR&page=4&sort_by=popularity.desc', options)
-    .then(res => res.json())
-    .then(data => showBox(data.results))
-    
-    
 
+  getSeries(API_URL)
 
+function getSeries(url){
+    fetch(url).then(res => res.json()).then(data => {
+        showBox(data.results)
+    })
+}
 function showBox(data) {
     container.innerHTML = '';
     data.forEach(box => {
@@ -82,12 +79,12 @@ const overlayContent = document.getElementById('overlay-content')
 /* Open when someone clicks on the span element */
 function openNav(box) {
     let id = box.id;
-    fetch('https://api.themoviedb.org/3'+'/movie/'+id +'/videos', options).then(res => res.json())
+    fetch(BASE_URL+'/movie/'+id +'/videos'+API_KEY).then(res => res.json())
     .then(videoData => {
         console.log(videoData);
         if(videoData){
             document.getElementById("myNav").style.width = "100%";
-            if(videoData.results.length > 0){
+            if(videoData.results.length > 1){
                 let embed = [];
                 videoData.results.forEach(video => {
                     let {name, key, site} = video
@@ -122,3 +119,13 @@ function getColor(vote){
         return 'red'
     }
 }
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const searchTerm = search.value;
+
+    if(searchTerm) {
+        getSeries(SEARCH_URL+'&query='+searchTerm)
+    }
+} )

@@ -22,7 +22,7 @@
 
 
 body{
-  background-color: #18171c; 
+  background-color: #18171c;
 }
 .interface{
   padding: 2.5rem 4% ;
@@ -189,6 +189,7 @@ header > .interface{
     justify-content: center;
     align-items: center;
     padding: 2.5rem 4%;
+    margin-top: ;
     
     
   }
@@ -260,7 +261,9 @@ header > .interface{
     font-family: poppins;
     border-radius: 20px;
   }
-
+ ::placeholder{
+    color: #fff;
+}
   .container-input {
     display: flex;
     flex-direction:row;
@@ -431,6 +434,8 @@ footer > .interface{
   }
   section{
     flex-direction: column-reverse;
+    margin-top: 20rem;  
+    margin-bottom: 20rem; 
     }
   .box {
     width: 450px;
@@ -460,8 +465,7 @@ footer > .interface{
     height: 0.3rem;
   }
   section{
-    padding: 2.5rem 10%;
-   
+    padding: 2.5rem 4%;
   }
   .box-2 {
     width: 400px;

@@ -26,24 +26,23 @@ overlay.addEventListener('click', ()=>{
 
 // TMDB API //
 
-const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxZTM2ZmM4YTAwZDgyODc1MTFiYWFjMDUwM2U1NTg1NCIsInN1YiI6IjY1NjI4MzRlMzY3OWExMDk3N2UwY2ZiZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.dOmmZZ_EakO2qkVa6JMZqC-ijgO5UY_CZaXdoeUk0U0'
-    }
-  };
-  const IMG_URL = 'https://image.tmdb.org/t/p/w500';
+const API_KEY = 'api_key=1e36fc8a00d8287511baac0503e55854'
+const BASE_URL = 'https://api.themoviedb.org/3'
+const API_URL = BASE_URL + '/discover/movie?include_adult=false&include_video=true&language=pt-BR&page=1&sort_by=popularity.desc&' + API_KEY
+const IMG_URL = 'https://image.tmdb.org/t/p/w500'
+const SEARCH_URL = BASE_URL + '/search/movie?'+API_KEY;
 
-  const container = document.getElementById('movies--container');
-  const form = document.getElementById('form');
-  const search = document.getElementById('search');
-  
-  fetch('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=true&language=pt-BR&page=1&sort_by=popularity.desc', options)
-    .then(res => res.json())
-    .then(data => showBox(data.results) )
-    
+const container = document.getElementById('movies--container');
+const form = document.getElementById('form');
+const search = document.getElementById('search');
 
+getMovies(API_URL)
+
+function getMovies(url){
+    fetch(url).then(res => res.json()).then(data => {
+        showBox(data.results)
+    })
+}
 
 function showBox(data) {
     container.innerHTML = '';
@@ -80,7 +79,7 @@ const overlayContent = document.getElementById('overlay-content')
 /* Open when someone clicks on the span element */
 function openNav(box) {
     let id = box.id;
-    fetch('https://api.themoviedb.org/3'+'/movie/'+id +'/videos', options).then(res => res.json())
+    fetch(BASE_URL +'/movie/'+id +'/videos'+ API_KEY ).then(res => res.json())
     .then(videoData => {
         console.log(videoData);
         if(videoData){
@@ -120,3 +119,13 @@ function getColor(vote){
         return 'red'
     }
 }
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const searchTerm = search.value;
+
+    if(searchTerm) {
+        getMovies(SEARCH_URL+'&query='+searchTerm)
+    }
+} )

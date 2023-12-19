@@ -173,6 +173,46 @@ main{
 main > .interface{
   padding: 2.5rem 4% ;
   }
+.search-box{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 2.5rem 4%;
+  margin-top: 5rem;
+}
+.search-txt{
+  font-size: 16px;
+  border-radius: 40px;
+  border: none;
+  padding: 7px 10px;
+  outline: 0;
+  width: 100%;
+  max-width: 250px;
+  background-color: #464646;
+  color: #fff;
+}
+.search-btn{
+  display: flex;
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  background-color: #59A928;
+  color: #fff;
+  margin-left: -30px;
+  cursor: pointer;
+  align-items: center;
+  transition: .3s;
+}
+.search-box:hover >.search-btn{
+  color: #59A928;
+  background-color: #fff;
+  transform: rotate(-290deg);
+}
+input::placeholder{
+  color: #ffffff80;
+}
 h2.title{
   color: #fff;
   font-size: 3.2rem;
@@ -197,17 +237,15 @@ h2.title span::after{
 .box--container{
   max-width: 1280px;  
   display: grid;
+  margin: auto;
   grid-template-columns: repeat(auto-fit,minmax(180px,auto));
   gap: 2rem;
   margin-top: 5rem;
   margin-bottom: 5rem;
-  padding: 2rem;
-  margin-right: 20px;
 }
 .box{
 width: 100%;
 height: 100%;
-margin: 1rem;
 border-radius: 5px;
 box-shadow: #070707 5px 5px 12px;
 background-color: #3d3d3d;
